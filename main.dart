@@ -134,14 +134,40 @@ findFirstElement(){
 
   ];
 
-  predicate(Fruit fruit){
+  bool isFruitApple(Fruit fruit){
     return fruit.name == 'apple';
   }
   late Fruit fruit;
-  fruit = fruits.firstWhere(predicate);
+  fruit = fruits.firstWhere(isFruitApple);
   print(fruit); // Fruit{id: 2, name: apple, color: red}
 
   fruit = fruits.firstWhere((fruit) => fruit.name == 'apple');
   print(fruit); // Fruit{id: 2, name: apple, color: red}
+}
+
+// Return list of elements that satisfy the given predicate function.
+findElements(){
+  List<int> oddNumbers = [1, 3, 5];
+  List<int> oddNumbersGreaterThan2 = oddNumbers.where((number) => number > 2).toList();
+  print(oddNumbersGreaterThan2); // [3, 5]
+
+  List<Fruit> fruits = [
+    Fruit(id: 1, name: 'banana', color: 'yellow'),
+    Fruit(id: 2, name: 'apple', color: 'red'),
+    Fruit(id: 3, name: 'orange', color: 'orange'),
+    Fruit(id: 4, name: 'peach', color: 'orange'),
+  ];
+
+  bool isColorOrange(Fruit fruit){
+    return fruit.color == 'orange';
+  }
+
+  late List<Fruit> fruitsWithColorOrange = [];
+
+  fruitsWithColorOrange = fruits.where(isColorOrange).toList();
+  print(fruitsWithColorOrange); // [Fruit{id: 3, name: orange, color: orange}, Fruit{id: 4, name: peach, color: orange}]
+
+  fruitsWithColorOrange = fruits.where((fruit) => fruit.color == 'orange').toList();
+  print(fruitsWithColorOrange); // [Fruit{id: 3, name: orange, color: orange}, Fruit{id: 4, name: peach, color: orange}]
 }
 
