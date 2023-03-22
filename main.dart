@@ -1,7 +1,7 @@
 import 'fruit.dart';
 
 main(){
-  mapList();
+  findFirstElement();
 }
 
 // add to list function
@@ -119,5 +119,29 @@ mapList(){
 
   List<String> fruitNames = fruits.map((fruit) => fruit.name).toList();
   print(fruitNames); // [banana, apple, orange]
+}
+
+// Returns the first element that satisfies the given predicate function.
+findFirstElement(){
+  List<int> oddNumbers = [1, 3, 5];
+  int firstOddNumber = oddNumbers.firstWhere((number) => number > 2);
+  print(firstOddNumber); // 3
+
+  List<Fruit> fruits = [
+    Fruit(id: 1, name: 'banana', color: 'yellow'),
+    Fruit(id: 2, name: 'apple', color: 'red'),
+    Fruit(id: 3, name: 'orange', color: 'orange'),
+
+  ];
+
+  predicate(Fruit fruit){
+    return fruit.name == 'apple';
+  }
+  late Fruit fruit;
+  fruit = fruits.firstWhere(predicate);
+  print(fruit); // Fruit{id: 2, name: apple, color: red}
+
+  fruit = fruits.firstWhere((fruit) => fruit.name == 'apple');
+  print(fruit); // Fruit{id: 2, name: apple, color: red}
 }
 
