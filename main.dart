@@ -1,7 +1,7 @@
 import 'fruit.dart';
 
 main(){
-  combineMultipleLists();
+  mapList();
 }
 
 // add to list function
@@ -63,9 +63,11 @@ shuffleList(){
   print(oddNumbers); // [7, 5, 1, 3]
 }
 
-// create new list of odd numbers from list of odd numbers and even numbers
-createNewListFromList(){
-
+// create new list of numbers from range
+getSublistFromList(){
+  List<int> oddNumbers = [1, 3, 5, 7];
+  List<int> numbers = oddNumbers.sublist(0, 2);
+  print(numbers); // [1, 3]
 }
 
 // sort list in ascending order
@@ -103,4 +105,19 @@ sortFruitsList(){
   // Sort by id descending order: [Fruit{id: 3, name: orange, color: orange}, Fruit{id: 2, name: apple, color: red}, Fruit{id: 1, name: banana, color: yellow}]
 }
 
+// map keyword applies a function to each element in the list and returns a new list with the results.
+mapList(){
+  List<int> oddNumbers = [1, 3, 5];
+  List<int> evenNumbers = oddNumbers.map((number) => number * 2).toList();
+  print(evenNumbers); // [2, 6, 10]
+
+  List<Fruit> fruits = [
+    Fruit(id: 1, name: 'banana', color: 'yellow'),
+    Fruit(id: 2, name: 'apple', color: 'red'),
+    Fruit(id: 3, name: 'orange', color: 'orange'),
+  ];
+
+  List<String> fruitNames = fruits.map((fruit) => fruit.name).toList();
+  print(fruitNames); // [banana, apple, orange]
+}
 
