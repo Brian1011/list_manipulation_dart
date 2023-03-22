@@ -48,9 +48,11 @@ removeLastFromList(){
   print(oddNumbers); // [1, 3]
 }
 
-// sort list
+// sort list in ascending order
 sortNumbersList(){
   List<int> oddNumbers = [1, 5, 3, 7];
   oddNumbers.sort();
   print(oddNumbers); // [1, 3, 5, 7]
 }
+
+// sort list of objects
