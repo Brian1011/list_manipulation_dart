@@ -1,5 +1,7 @@
+import 'fruit.dart';
+
 main(){
-  sortNumbersList();
+  sortFruitsList();
 }
 
 // add to list function
@@ -55,4 +57,32 @@ sortNumbersList(){
   print(oddNumbers); // [1, 3, 5, 7]
 }
 
-// sort list of objects
+// sort list in descending order
+sortNumbersListDesc(){
+  List<int> oddNumbers = [1, 5, 3, 7];
+  oddNumbers.sort((a, b) => b.compareTo(a));
+  print(oddNumbers); // [7, 5, 3, 1]
+}
+
+// sort list of objects by property
+sortFruitsList(){
+  List<Fruit> fruits = [
+    Fruit(id: 1, name: 'banana', color: 'yellow'),
+    Fruit(id: 2, name: 'apple', color: 'red'),
+    Fruit(id: 3, name: 'orange', color: 'orange'),
+  ];
+
+  fruits.sort((a, b) => a.name.compareTo(b.name));
+  print("Sort by name ascending order: $fruits");
+  // Sort by name ascending order: [Fruit{id: 2, name: apple, color: red}, Fruit{id: 1, name: banana, color: yellow}, Fruit{id: 3, name: orange, color: orange}]
+
+  fruits.sort((a, b) => a.id.compareTo(b.id));
+  print("Sort by id ascending order: $fruits");
+  // Sort by id ascending order: [Fruit{id: 1, name: banana, color: yellow}, Fruit{id: 2, name: apple, color: red}, Fruit{id: 3, name: orange, color: orange}]
+
+  fruits.sort((a, b) => b.id.compareTo(a.id));
+  print("Sort by id descending order: $fruits");
+  // Sort by id descending order: [Fruit{id: 3, name: orange, color: orange}, Fruit{id: 2, name: apple, color: red}, Fruit{id: 1, name: banana, color: yellow}]
+}
+
+
