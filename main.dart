@@ -1,5 +1,5 @@
 main(){
-  removeLastFromList();
+  sortNumbersList();
 }
 
 // add to list function
@@ -46,4 +46,11 @@ removeLastFromList(){
   List<int> oddNumbers = [1, 3, 5];
   oddNumbers.removeLast();
   print(oddNumbers); // [1, 3]
+}
+
+// sort list
+sortNumbersList(){
+  List<int> oddNumbers = [1, 5, 3, 7];
+  oddNumbers.sort();
+  print(oddNumbers); // [1, 3, 5, 7]
 }
