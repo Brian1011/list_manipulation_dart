@@ -1,7 +1,7 @@
 import 'fruit.dart';
 
 main(){
-  shuffleList();
+  combineMultipleLists();
 }
 
 // add to list function
@@ -12,16 +12,22 @@ addToList(){
 }
 
 // adds all the elements of evenNumbers list to oddNumbers list.
-addAllToList(){
+combineMultipleLists(){
   List<int> oddNumbers = [1, 3, 5];
   List<int> evenNumbers = [2, 4, 6];
+  
+  List<int> numbers = oddNumbers + evenNumbers;
+  print(numbers); // [1, 3, 5, 2, 4, 6]
+
+  List<int> allNumbers = [...oddNumbers, ...evenNumbers];
+  print(allNumbers); // [1, 3, 5, 2, 4, 6]
 
   oddNumbers.addAll(evenNumbers);
   print(oddNumbers); // [1, 3, 5, 2, 4, 6]
 }
 
 // insert to list at a position
-insertToList(){
+insertToListAtIndexPosition(){
   List<int> oddNumbers = [1, 3, 5];
   int position = 1;
   oddNumbers.insert(position, 2);
@@ -55,6 +61,11 @@ shuffleList(){
   List<int> oddNumbers = [1, 5, 3, 7];
   oddNumbers.shuffle();
   print(oddNumbers); // [7, 5, 1, 3]
+}
+
+// create new list of odd numbers from list of odd numbers and even numbers
+createNewListFromList(){
+
 }
 
 // sort list in ascending order
