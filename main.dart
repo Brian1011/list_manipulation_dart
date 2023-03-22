@@ -1,7 +1,7 @@
 import 'fruit.dart';
 
 main(){
-  sortFruitsList();
+  shuffleList();
 }
 
 // add to list function
@@ -48,6 +48,13 @@ removeLastFromList(){
   List<int> oddNumbers = [1, 3, 5];
   oddNumbers.removeLast();
   print(oddNumbers); // [1, 3]
+}
+
+// shuffle list elements randomly
+shuffleList(){
+  List<int> oddNumbers = [1, 5, 3, 7];
+  oddNumbers.shuffle();
+  print(oddNumbers); // [7, 5, 1, 3]
 }
 
 // sort list in ascending order
