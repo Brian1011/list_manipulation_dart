@@ -1,5 +1,5 @@
 main(){
-  removeFromListAtPosition();
+  removeLastFromList();
 }
 
 // add to list function
@@ -36,7 +36,14 @@ removeFromList(){
 // remove element at a position
 removeFromListAtPosition(){
   List<int> oddNumbers = [1, 3, 5];
-  oddNumbers.removeAt(1);
+  int position = 1;
+  oddNumbers.removeAt(position);
   print(oddNumbers); // [1, 5]
 }
 
+// remove last element
+removeLastFromList(){
+  List<int> oddNumbers = [1, 3, 5];
+  oddNumbers.removeLast();
+  print(oddNumbers); // [1, 3]
+}
