@@ -1,7 +1,7 @@
-import 'fruit.dart';
+import 'models/fruit.dart';
 
 main(){
-  findFirstElement();
+  forEachList();
 }
 
 // add to list function
@@ -162,7 +162,7 @@ findElements(){
     return fruit.color == 'orange';
   }
 
-  late List<Fruit> fruitsWithColorOrange = [];
+  List<Fruit> fruitsWithColorOrange = [];
 
   fruitsWithColorOrange = fruits.where(isColorOrange).toList();
   print(fruitsWithColorOrange); // [Fruit{id: 3, name: orange, color: orange}, Fruit{id: 4, name: peach, color: orange}]
@@ -171,3 +171,20 @@ findElements(){
   print(fruitsWithColorOrange); // [Fruit{id: 3, name: orange, color: orange}, Fruit{id: 4, name: peach, color: orange}]
 }
 
+// forEach keyword applies a function to each element in the list.
+forEachList(){
+  List<int> oddNumbers = [1, 3, 5];
+  oddNumbers.forEach((number) => print(number)); // 1 3 5
+
+  List<Fruit> fruits = [
+    Fruit(id: 1, name: 'banana', color: 'yellow'),
+    Fruit(id: 2, name: 'apple', color: 'red'),
+    Fruit(id: 3, name: 'orange', color: 'orange'),
+  ];
+
+  fruits.forEach((fruit) {
+    print(fruit.name.toUpperCase());
+  });
+
+  // BANANA APPLE ORANGE
+}
