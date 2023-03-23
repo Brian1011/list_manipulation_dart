@@ -1,7 +1,8 @@
+import 'models/cart.dart';
 import 'models/fruit.dart';
 
 main(){
-  forEachList();
+  foldList();
 }
 
 // add to list function
@@ -187,4 +188,30 @@ forEachList(){
   });
 
   // BANANA APPLE ORANGE
+}
+
+// fold keyword applies a function to each element in the list and returns a single value.
+foldList(){
+  int initialValue = 0;
+  List<int> oddNumbers = [1, 3, 5];
+  int sum = oddNumbers.fold(initialValue, (previousValue, element) => previousValue + element);
+  print(sum); // 9
+
+  List<Fruit> fruits = [
+    Fruit(id: 1, name: 'banana', color: 'yellow'),
+    Fruit(id: 2, name: 'apple', color: 'red'),
+    Fruit(id: 3, name: 'orange', color: 'orange'),
+  ];
+
+  String fruitNames = fruits.fold('', (previousValue, element) => previousValue + element.name + ', ');
+  print(fruitNames); // banana, apple, orange,
+  
+  List<Cart> cartItems = [
+    Cart(id: 1, title: 'banana', quantity: 3, unitPrice: 10),
+    Cart(id: 2, title: 'apple', quantity: 2, unitPrice: 20),
+    Cart(id: 3, title: 'orange', quantity: 5, unitPrice: 30),
+  ];
+
+  double total = cartItems.fold(0.0, (previousValue, element) => previousValue + (element.quantity * element.unitPrice));
+  print(total); // 220.0
 }
