@@ -1,9 +1,9 @@
-# List Manipulation Functions in Dart
+# List Manipulation methods in Dart
 
 ## Table of Contents
 1. [Introduction](#introduction) 
 2. [Getting Started](#getting-started)
-3. [List Manipulation Functions](#list-manipulation-functions)
+3. [List Manipulation Methods](#list-manipulation-methods)
     - [1. Add](#1-add)
     - [2. Insert](#2-insert)
     - [3. AddAll](#3-addall)
@@ -30,15 +30,15 @@
 5. [Author(s) and Contributor(s)](#authors)
 
 ## Introduction
-This is a repository of Dart list manipulation functions created for easy reference. It contains a comprehensive list of functions that can be used to manipulate lists in Dart. 
+This is a repository of Dart list manipulation methods created for easy reference. It contains a comprehensive list of methods that can be used to manipulate lists in Dart. 
 
-These functions are useful for anyone who works with lists frequently and wants to quickly look up available options. The repository serves as a handy reference guide, allowing developers to easily find the function they need without having to search for it elsewhere. 
+These methods are useful for anyone who works with lists frequently and wants to quickly look up available options. The repository serves as a handy reference guide, allowing developers to easily find the function they need without having to search for it elsewhere. 
 
-By structuring these functions in a single location, it makes it easier to keep track of them and utilize them effectively in projects.
+By structuring these methods in a single location, it makes it easier to keep track of them and utilize them effectively in projects.
 
 A brief explanation of each function is provided along with a dart code example. Incase of any issues, please raise an issue in the repository and I will get back to you as soon as possible.
 
-A Youtube playlist with some of the functions explained is available [here](https://www.youtube.com/watch?v=7ksgb4pqTao&list=PL50P5JG2-X3rz-GsihJ4PNncXBAv4NA8Z).
+A Youtube playlist with some of the methods explained is available [here](https://www.youtube.com/watch?v=7ksgb4pqTao&list=PL50P5JG2-X3rz-GsihJ4PNncXBAv4NA8Z).
 
 If you find this repository useful, please consider giving it a star.
 
@@ -49,8 +49,8 @@ The code examples have been tested on Dart 2.19.2
 Run code using the following command:
 ```dart main.dart```
  
-## List Manipulation Functions
-The following functions are covered:
+## List Manipulation methods
+The following methods are covered:
 - `add`: adds an element to the end of a list
 - `insert`: inserts an element at a specific index in a list
 - `addAll`: adds multiple elements to the end of a list
