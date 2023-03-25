@@ -13,8 +13,16 @@ addToList(){
   print(oddNumbers); // [1, 3, 5, 7]
 }
 
+// insert to list at a position
+insertToListAtIndexPosition(){
+  List<int> oddNumbers = [1, 3, 5];
+  int position = 1;
+  oddNumbers.insert(position, 2);
+  print(oddNumbers); // [1, 2, 3, 5]
+}
+
 // adds all the elements of evenNumbers list to oddNumbers list.
-combineMultipleLists(){
+combineLists(){
   List<int> oddNumbers = [1, 3, 5];
   List<int> evenNumbers = [2, 4, 6];
   
@@ -28,14 +36,6 @@ combineMultipleLists(){
   print(oddNumbers); // [1, 3, 5, 2, 4, 6]
 }
 
-// insert to list at a position
-insertToListAtIndexPosition(){
-  List<int> oddNumbers = [1, 3, 5];
-  int position = 1;
-  oddNumbers.insert(position, 2);
-  print(oddNumbers); // [1, 2, 3, 5]
-}
-
 // remove specific element list
 removeFromList(){
   List<int> oddNumbers = [1, 3, 5];
@@ -44,7 +44,7 @@ removeFromList(){
 }
 
 // remove element at a position
-removeFromListAtPosition(){
+removeAtPosition(){
   List<int> oddNumbers = [1, 3, 5];
   int position = 1;
   oddNumbers.removeAt(position);
@@ -56,6 +56,24 @@ removeLastFromList(){
   List<int> oddNumbers = [1, 3, 5];
   oddNumbers.removeLast();
   print(oddNumbers); // [1, 3]
+}
+
+// remove range of values from list
+removeRangeFromList(){
+  List<int> oddNumbers = [1, 3, 5, 7];
+  oddNumbers.removeRange(1, 3);
+  print(oddNumbers); // [1, 7]
+}
+
+// clear list elements
+clearList(){
+  List<int> oddNumbers = [1, 3, 5];
+  oddNumbers.clear();
+  print(oddNumbers); // []
+
+  // an alternative is to assign an empty list to the variable
+  oddNumbers = [];
+  print(oddNumbers); // []
 }
 
 // shuffle list elements randomly

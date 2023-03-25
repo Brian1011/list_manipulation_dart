@@ -15,25 +15,25 @@ Run code using the following command:
 The following functions are covered:
 
 - `add`: adds an element to the end of a list
-- `addAll`: adds multiple elements to the end of a list
 - `insert`: inserts an element at a specific index in a list
+- `addAll`: adds multiple elements to the end of a list
 - `remove`: removes the first occurrence of an element from a list
 - `removeAt`: removes an element at a specific index in a list
 - `removeLast`: removes the last element from a list
 - `removeRange`: removes a range of elements from a list
-- `clear` : removes all elements from a list
-- `remove` : Removes the first occurrence of a specified element from the list.
-- `insert` : Inserts an element at a specified position in the list.
-- `sort` : Sorts the elements in the list.
-- `shuffle` : Randomly shuffles the elements in the list.
-- `sublist` : Returns a new list containing a specified range of elements from an existing list.
+- `clear`: removes all elements from a list
+- `shuffle`: Randomly shuffles the elements in the list.
+- `sublist`: Returns a new list containing a specified range of elements from an existing list.
+- `sort`: Sorts the elements in the list.
 - `map`: Applies a function to each element in the list and returns a new list with the results. 
-- `where` : Returns a new list containing only the elements that satisfy a specified condition.
-- `forEach` : Executes a function for each element in the list.
-  fold(): Accumulates a single value by applying a function to each element in the list.
-  reduce(): Reduces the list to a single value by applying a function to each element.
-  any(): Checks if at least one element in the list satisfies a specified condition.
-  every(): Checks if all elements in the list satisfy a specified condition.
+- `firstWhere`: Returns the first element that satisfies a specified condition.
+- `where`: Returns a new list containing only the elements that satisfy a specified condition.
+- `forEach`: Executes a function for each element in the list.
+- `fold`: Accumulates a single value by applying a function to each element in the list.
+- `reduce`: Reduces the list to a single value by applying a function to each element.
+- `any`: Checks if at least one element in the list satisfies a specified condition.
+- `every`: Checks if all elements in the list satisfy a specified condition.
+- `expand`: Expand keyword applies a function to each element in the list and returns a new list with the results.
 
 This repository contains sample code demonstrating various list manipulation functions in Dart. 
 Below is a list of the functions covered, along with a brief explanation of what each function does and a code example.
