@@ -3,7 +3,7 @@ import 'models/fruit.dart';
 import 'models/product.dart';
 
 main(){
-  anyList();
+  findLastElement();
 }
 
 // add to list function
@@ -25,15 +25,19 @@ insertToListAtIndexPosition(){
 combineLists(){
   List<int> oddNumbers = [1, 3, 5];
   List<int> evenNumbers = [2, 4, 6];
-  
+
+  // add all keyword
+  oddNumbers.addAll(evenNumbers);
+  print(oddNumbers); // [1, 3, 5, 2, 4, 6]
+
+  // alternative method using + operator
   List<int> numbers = oddNumbers + evenNumbers;
   print(numbers); // [1, 3, 5, 2, 4, 6]
 
+  // alternative method using spread operator
   List<int> allNumbers = [...oddNumbers, ...evenNumbers];
   print(allNumbers); // [1, 3, 5, 2, 4, 6]
 
-  oddNumbers.addAll(evenNumbers);
-  print(oddNumbers); // [1, 3, 5, 2, 4, 6]
 }
 
 // remove specific element list
@@ -61,8 +65,10 @@ removeLastFromList(){
 // remove range of values from list
 removeRangeFromList(){
   List<int> oddNumbers = [1, 3, 5, 7];
-  oddNumbers.removeRange(1, 3);
-  print(oddNumbers); // [1, 7]
+  int start = 0;
+  int end = 1;
+  oddNumbers.removeRange(start, end);
+  print(oddNumbers); // [5, 7]
 }
 
 // clear list elements
@@ -86,8 +92,10 @@ shuffleList(){
 // create new list of numbers from range
 getSublistFromList(){
   List<int> oddNumbers = [1, 3, 5, 7];
-  List<int> numbers = oddNumbers.sublist(0, 2);
-  print(numbers); // [1, 3]
+  int start = 1;
+  int end = 3;
+  List<int> subList = oddNumbers.sublist(start, end);
+  print(subList); // [3, 5]
 }
 
 // sort list in ascending order
@@ -157,12 +165,35 @@ findFirstElement(){
   bool isFruitApple(Fruit fruit){
     return fruit.name == 'apple';
   }
-  late Fruit fruit;
+  Fruit fruit;
   fruit = fruits.firstWhere(isFruitApple);
   print(fruit); // Fruit{id: 2, name: apple, color: red}
 
   fruit = fruits.firstWhere((fruit) => fruit.name == 'apple');
   print(fruit); // Fruit{id: 2, name: apple, color: red}
+}
+
+// Returns the last element that satisfies the given predicate function.
+findLastElement(){
+  List<int> oddNumbers = [1, 3, 5];
+  int lastOddNumber = oddNumbers.lastWhere((number) => number > 2);
+  print(lastOddNumber); // 5
+
+  List<Fruit> fruits = [
+    Fruit(id: 1, name: 'banana', color: 'yellow'),
+    Fruit(id: 2, name: 'apple', color: 'green'),
+    Fruit(id: 3, name: 'mango', color: 'green'),
+  ];
+
+  bool isFruitColorGreen(Fruit fruit){
+    return fruit.color == 'green';
+  }
+  Fruit fruit;
+  fruit = fruits.lastWhere(isFruitColorGreen);
+  print(fruit); // Fruit{id: 3, name: mango, color: green}
+
+  fruit = fruits.lastWhere((fruit) => fruit.color == 'green');
+  print(fruit); // Fruit{id: 3, name: mango, color: green}
 }
 
 // Return list of elements that satisfy the given predicate function.
