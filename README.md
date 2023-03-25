@@ -27,7 +27,7 @@
     - [21. Every](#21-every)
     - [22. Expand](#22-expand)
 4. [Contributing](#contributing)
-5. [Authors](#authors)
+5. [Author(s) and Contributor(s)](#authors)
 
 ## Introduction
 This is a repository of Dart list manipulation functions created for easy reference. It contains a comprehensive list of functions that can be used to manipulate lists in Dart. 
@@ -83,6 +83,8 @@ The add function adds an element to the end of a list.
     print(oddNumbers); // [1, 3, 5, 7]
 ```
 
+**[⬆ Back to top](#table-of-contents)**
+
 ### 2. Insert
 The insert function inserts an element at a specific index in a list.
 
@@ -92,6 +94,7 @@ The insert function inserts an element at a specific index in a list.
     oddNumbers.insert(position, 2);
     print(oddNumbers); // [1, 2, 3, 5] 2, 3, 5]
 ```
+**[⬆ Back to top](#table-of-contents)**
 
 ### 3. AddAll
 The addAll function adds multiple elements to the end of a list. You can achieve the same results using other alternatives as shown below.
@@ -112,6 +115,7 @@ The addAll function adds multiple elements to the end of a list. You can achieve
     List<int> allNumbers = [...oddNumbers, ...evenNumbers];
     print(allNumbers); // [1, 3, 5, 2, 4, 6]
 ```
+**[⬆ Back to top](#table-of-contents)**
 
 ### 4. Remove
 The remove function removes the first occurrence of an element from a list.
@@ -121,6 +125,7 @@ The remove function removes the first occurrence of an element from a list.
     oddNumbers.remove(3);
     print(oddNumbers); // [1, 5]
 ```
+**[⬆ Back to top](#table-of-contents)**
 
 ### 5. RemoveAt
 The removeAt function removes an element at a specific index in a list.
@@ -131,6 +136,7 @@ The removeAt function removes an element at a specific index in a list.
     oddNumbers.removeAt(position);
     print(oddNumbers); // [1, 5]
 ```
+**[⬆ Back to top](#table-of-contents)**
 
 ### 6. RemoveLast
 The removeLast function removes the last element from a list.
@@ -140,6 +146,7 @@ The removeLast function removes the last element from a list.
     oddNumbers.removeLast();
     print(oddNumbers); // [1, 3]
 ```
+**[⬆ Back to top](#table-of-contents)**
 
 ### 7. RemoveRange
 The removeRange function removes a range of elements from a list.
@@ -151,6 +158,7 @@ The removeRange function removes a range of elements from a list.
     oddNumbers.removeRange(start, end);
     print(oddNumbers); // [5, 7]
 ```
+**[⬆ Back to top](#table-of-contents)**
 
 ### 8. Clear
 The clear function removes all elements from a list.
@@ -164,6 +172,8 @@ The clear function removes all elements from a list.
     oddNumbers = [];
     print(oddNumbers); // []
 ```
+**[⬆ Back to top](#table-of-contents)**
+
 
 ### 9. Shuffle
 The shuffle function randomly shuffles the elements in the list.
@@ -173,6 +183,7 @@ The shuffle function randomly shuffles the elements in the list.
     oddNumbers.shuffle();
     print(oddNumbers); // [5, 1, 3]
 ```
+**[⬆ Back to top](#table-of-contents)**
 
 ### 10. Sublist
 The sublist function returns a new list containing a specified range of elements from an existing list.
@@ -184,6 +195,7 @@ The sublist function returns a new list containing a specified range of elements
     List<int> subList = oddNumbers.sublist(start, end);
     print(subList); // [3, 5]
 ```
+**[⬆ Back to top](#table-of-contents)**
 
 ### 11. Sort
 The sort function sorts the elements in the list. You can apply sorting in ascending or descending order. You can also sort list of objects based on their properties.
@@ -216,6 +228,7 @@ The sort function sorts the elements in the list. You can apply sorting in ascen
     print("Sort by id descending order: $fruits");
     // Sort by id descending order: [Fruit{id: 3, name: orange, color: orange}, Fruit{id: 2, name: apple, color: red}, Fruit{id: 1, name: banana, color: yellow}]
 ```
+**[⬆ Back to top](#table-of-contents)**
 
 ### 12. Map
 The map function applies a function to each element in the list and returns a new list with the results.
@@ -234,6 +247,7 @@ The map function applies a function to each element in the list and returns a ne
     List<String> fruitNames = fruits.map((fruit) => fruit.name).toList();
     print(fruitNames); // [banana, apple, orange]
 ```
+**[⬆ Back to top](#table-of-contents)**
 
 ### 13. FirstWhere
 The firstWhere function returns the first element in the list that matches a given condition. 
@@ -260,6 +274,7 @@ The firstWhere function returns the first element in the list that matches a giv
     fruit = fruits.firstWhere((fruit) => fruit.name == 'apple');
     print(fruit); // Fruit{id: 2, name: apple, color: red}
 ```
+**[⬆ Back to top](#table-of-contents)**
 
 ### 14. LastWhere
 The lastWhere function returns the last element in the list that matches a given condition. 
@@ -286,6 +301,7 @@ The lastWhere function returns the last element in the list that matches a given
     fruit = fruits.lastWhere((fruit) => fruit.color == 'green');
     print(fruit); // Fruit{id: 3, name: mango, color: green}
 ```
+**[⬆ Back to top](#table-of-contents)**
 
 ### 15. Where
 The where function returns a new list containing all elements that match a given condition. 
@@ -314,6 +330,7 @@ The where function returns a new list containing all elements that match a given
     fruitsWithColorOrange = fruits.where((fruit) => fruit.color == 'orange').toList();
     print(fruitsWithColorOrange); // [Fruit{id: 3, name: orange, color: orange}, Fruit{id: 4, name: peach, color: orange}]
 ```
+**[⬆ Back to top](#table-of-contents)**
 
 ### 16. WhereType
 The whereType function returns a new list containing all elements that match a given type. 
@@ -323,6 +340,7 @@ The whereType function returns a new list containing all elements that match a g
     List<int> numbers = list.whereType<int>().toList();
     print(numbers); // [1, 3, 5]
 ```
+**[⬆ Back to top](#table-of-contents)**
 
 ### 17. ForEach
 The forEach function applies a function to each element in the list. 
@@ -348,6 +366,7 @@ The forEach function applies a function to each element in the list.
     // APPLE
     // ORANGE
 ```
+**[⬆ Back to top](#table-of-contents)**
 
 ### 18. Fold
 The fold function combines all elements in the list into a single value by repeatedly applying a function. 
@@ -377,6 +396,7 @@ The fold function combines all elements in the list into a single value by repea
     double total = cartItems.fold(initialUnitPrice, (previousValue, element) => previousValue + (element.quantity * element.unitPrice));
     print(total); // 220.0
 ```
+**[⬆ Back to top](#table-of-contents)**
 
 ### 19. Reduce
 The reduce function combines all elements in the list into a single value by repeatedly applying a function. 
@@ -398,6 +418,7 @@ The difference between fold and reduce is that fold takes an initial value as a 
     String fruitNames = fruits.reduce((value, element) => value..name += ', ${element.name}').name;
     print(fruitNames); // banana, apple, orange
 ```
+**[⬆ Back to top](#table-of-contents)**
 
 ### 20. Every
 The every function returns true if all elements in the list match a given condition. 
@@ -416,6 +437,7 @@ The every function returns true if all elements in the list match a given condit
     bool areAllFruitsOrange = fruits.every((fruit) => fruit.color == 'orange');
     print(areAllFruitsOrange); // 
 ```
+**[⬆ Back to top](#table-of-contents)**
 
 ### 21. Any
 The any function returns true if at least one element in the list matches a given condition. 
@@ -434,6 +456,7 @@ The any function returns true if at least one element in the list matches a give
     bool isAnyFruitOrange = fruits.any((fruit) => fruit.color == 'orange');
     print(isAnyFruitOrange); // true
 ```
+**[⬆ Back to top](#table-of-contents)**
 
 ### 22. Expand
 The expand function expands each element of a list into zero or more elements. 
@@ -487,6 +510,7 @@ The expand function expands each element of a list into zero or more elements.
     print(productPrices); 
     // [banana price in USD is 4.0, banana price in EUR is 3.0, banana price in BTC is 0.002, apple price in USD is 5.0, apple price in EUR is 4.0, apple price in BTC is 0.003, orange price in USD is 6.0, orange price in EUR is 5.0, orange price in BTC is 0.004]
 ```
+**[⬆ Back to top](#table-of-contents)**
 
 ## Contributing
 
@@ -495,7 +519,7 @@ to discuss what you would like to change.
 
 Please make sure you test as appropriately.
 
-## Authors
+## Authors and Contributors
 #### 1. Brian Mutinda
 [Github - brian1011](https://github.com/Brian1011)
 
