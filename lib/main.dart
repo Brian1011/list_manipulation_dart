@@ -233,6 +233,38 @@ reduceList(){
   print(fruitNames); // banana, apple, orange
 }
 
+// every keyword returns true if all elements in the list satisfy the given predicate function.
+everyList(){
+  List<int> oddNumbers = [1, 3, 5];
+  bool areAllOddNumbersGreaterThan2 = oddNumbers.every((number) => number > 2);
+  print(areAllOddNumbersGreaterThan2); // false
+
+  List<Fruit> fruits = [
+    Fruit(id: 1, name: 'banana', color: 'yellow'),
+    Fruit(id: 2, name: 'apple', color: 'red'),
+    Fruit(id: 3, name: 'orange', color: 'orange'),
+  ];
+
+  bool areAllFruitsOrange = fruits.every((fruit) => fruit.color == 'orange');
+  print(areAllFruitsOrange); // false
+}
+
+// any keyword returns true if any element in the list satisfies the given predicate function.
+anyList(){
+  List<int> oddNumbers = [1, 3, 5];
+  bool isAnyOddNumberGreaterThan2 = oddNumbers.any((number) => number > 2);
+  print(isAnyOddNumberGreaterThan2); // true
+
+  List<Fruit> fruits = [
+    Fruit(id: 1, name: 'banana', color: 'yellow'),
+    Fruit(id: 2, name: 'apple', color: 'red'),
+    Fruit(id: 3, name: 'orange', color: 'orange'),
+  ];
+
+  bool isAnyFruitOrange = fruits.any((fruit) => fruit.color == 'orange');
+  print(isAnyFruitOrange); // true
+}
+
 // expand keyword applies a function to each element in the list and returns a new list with the results.
 expandList(){
   List<int> oddNumbers = [1, 3, 5];
@@ -279,36 +311,4 @@ expandList(){
   // list of all products with their respective currency prices
   List<String> productPrices = products.expand((product) => product.currencyPrices.map((price) => '${product.title} price in ${price.currency} is ${price.value}')).toList();
   print(productPrices); // [banana price in USD is 4.0, banana price in EUR is 3.0, banana price in BTC is 0.002, apple price in USD is 5.0, apple price in EUR is 4.0, apple price in BTC is 0.003, orange price in USD is 6.0, orange price in EUR is 5.0, orange price in BTC is 0.004]
-}
-
-// every keyword returns true if all elements in the list satisfy the given predicate function.
-everyList(){
-  List<int> oddNumbers = [1, 3, 5];
-  bool areAllOddNumbersGreaterThan2 = oddNumbers.every((number) => number > 2);
-  print(areAllOddNumbersGreaterThan2); // false
-
-  List<Fruit> fruits = [
-    Fruit(id: 1, name: 'banana', color: 'yellow'),
-    Fruit(id: 2, name: 'apple', color: 'red'),
-    Fruit(id: 3, name: 'orange', color: 'orange'),
-  ];
-
-  bool areAllFruitsOrange = fruits.every((fruit) => fruit.color == 'orange');
-  print(areAllFruitsOrange); // false
-}
-
-// any keyword returns true if any element in the list satisfies the given predicate function.
-anyList(){
-  List<int> oddNumbers = [1, 3, 5];
-  bool isAnyOddNumberGreaterThan2 = oddNumbers.any((number) => number > 2);
-  print(isAnyOddNumberGreaterThan2); // true
-
-  List<Fruit> fruits = [
-    Fruit(id: 1, name: 'banana', color: 'yellow'),
-    Fruit(id: 2, name: 'apple', color: 'red'),
-    Fruit(id: 3, name: 'orange', color: 'orange'),
-  ];
-
-  bool isAnyFruitOrange = fruits.any((fruit) => fruit.color == 'orange');
-  print(isAnyFruitOrange); // true
 }
