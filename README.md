@@ -38,7 +38,7 @@ By structuring these functions in a single location, it makes it easier to keep 
 
 A brief explanation of each function is provided along with a dart code example. Incase of any issues, please raise an issue in the repository and I will get back to you as soon as possible.
 
-A Youtube playlist with some functions is available [here](https://www.youtube.com/watch?v=7ksgb4pqTao&list=PL50P5JG2-X3rz-GsihJ4PNncXBAv4NA8Z).
+A Youtube playlist with some of the functions explained is available [here](https://www.youtube.com/watch?v=7ksgb4pqTao&list=PL50P5JG2-X3rz-GsihJ4PNncXBAv4NA8Z).
 
 If you find this repository useful, please consider giving it a star.
 
