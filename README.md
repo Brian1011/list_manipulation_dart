@@ -22,15 +22,14 @@ The following functions are covered:
 - `removeLast`: removes the last element from a list
 - `removeRange`: removes a range of elements from a list
 - `clear` : removes all elements from a list
-- add(): Adds an element to the end of the list.
-  remove(): Removes the first occurrence of a specified element from the list.
-  insert(): Inserts an element at a specified position in the list.
-  sort(): Sorts the elements in the list.
-  shuffle(): Randomly shuffles the elements in the list.
-  sublist(): Returns a new list containing a specified range of elements from an existing list.
-  map(): Applies a function to each element in the list and returns a new list with the results.
-  where(): Returns a new list containing only the elements that satisfy a specified condition.
-  forEach(): Executes a function for each element in the list.
+- `remove` : Removes the first occurrence of a specified element from the list.
+- `insert` : Inserts an element at a specified position in the list.
+- `sort` : Sorts the elements in the list.
+- `shuffle` : Randomly shuffles the elements in the list.
+- `sublist` : Returns a new list containing a specified range of elements from an existing list.
+- `map`: Applies a function to each element in the list and returns a new list with the results. 
+- `where` : Returns a new list containing only the elements that satisfy a specified condition.
+- `forEach` : Executes a function for each element in the list.
   fold(): Accumulates a single value by applying a function to each element in the list.
   reduce(): Reduces the list to a single value by applying a function to each element.
   any(): Checks if at least one element in the list satisfies a specified condition.
