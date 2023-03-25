@@ -1,8 +1,44 @@
-[[Dart flutter image]]
-
 # List Manipulation Functions in Dart
+
+## Table of Contents
+1. [Introduction](#introduction) 
+2. [Getting Started](#getting-started)
+3. [List Manipulation Functions](#list-manipulation-functions)
+    - [1. Add](#1-add)
+    - [2. Insert](#2-insert)
+    - [3. AddAll](#3-addall)
+    - [4. Remove](#4-remove)
+    - [5. RemoveAt](#5-removeat)
+    - [6. RemoveLast](#6-removelast)
+    - [7. RemoveRange](#7-removerange)
+    - [8. Clear](#8-clear)
+    - [9. Shuffle](#9-shuffle)
+    - [10. Sublist](#10-sublist)
+    - [11. Sort](#11-sort)
+    - [12. Map](#12-map)
+    - [13. FirstWhere](#13-firstwhere)
+    - [14. LastWhere](#14-lastwhere)
+    - [15. Where](#15-where)
+    - [16. WhereType](#16-wheretype)
+    - [17. ForEach](#17-foreach)
+    - [18. Fold](#18-fold)
+    - [19. Reduce](#19-reduce)
+    - [20. Any](#20-any)
+    - [21. Every](#21-every)
+    - [22. Expand](#22-expand)
+4. [Contributing](#contributing)
+5. [Authors](#authors)
+
 ## Introduction
-This repository contains a list of functions that can be used to manipulate lists in Dart. A brief explanation of each function is provided along with a dart code example. Incase of any issues, please raise an issue in the repository and I will get back to you as soon as possible. 
+This is a repository of Dart list manipulation functions created for easy reference. It contains a comprehensive list of functions that can be used to manipulate lists in Dart. 
+
+These functions are useful for anyone who works with lists frequently and wants to quickly look up available options. The repository serves as a handy reference guide, allowing developers to easily find the function they need without having to search for it elsewhere. 
+
+By structuring these functions in a single location, it makes it easier to keep track of them and utilize them effectively in projects.
+
+A brief explanation of each function is provided along with a dart code example. Incase of any issues, please raise an issue in the repository and I will get back to you as soon as possible.
+
+A Youtube playlist about some of the functions is available [here](https://www.youtube.com/watch?v=7ksgb4pqTao&list=PL50P5JG2-X3rz-GsihJ4PNncXBAv4NA8Z).
 
 If you find this repository useful, please consider giving it a star.
 
@@ -12,10 +48,9 @@ The code examples have been tested on Dart 2.19.2
 
 Run code using the following command:
 ```dart main.dart```
-
-## Table of Contents
+ 
+## List Manipulation Functions
 The following functions are covered:
-
 - `add`: adds an element to the end of a list
 - `insert`: inserts an element at a specific index in a list
 - `addAll`: adds multiple elements to the end of a list
@@ -27,7 +62,7 @@ The following functions are covered:
 - `shuffle`: Randomly shuffles the elements in the list.
 - `sublist`: Returns a new list containing a specified range of elements from an existing list.
 - `sort`: Sorts the elements in the list.
-- `map`: Applies a function to each element in the list and returns a new list with the results. 
+- `map`: Applies a function to each element in the list and returns a new list with the results.
 - `firstWhere`: Returns the first element that satisfies a specified condition.
 - `lastWhere`: Returns the last element that satisfies a specified condition.
 - `where`: Returns a new list containing only the elements that satisfy a specified condition.
@@ -38,9 +73,6 @@ The following functions are covered:
 - `any`: Checks if at least one element in the list satisfies a specified condition.
 - `every`: Checks if all elements in the list satisfy a specified condition.
 - `expand`: Expand keyword applies a function to each element in the list and returns a new list with the results.
-
- 
-## List Manipulation Functions
 
 ### 1. Add
 The add function adds an element to the end of a list.
@@ -442,13 +474,29 @@ The expand function expands each element of a list into zero or more elements.
     
     // get list of all product prices where currency is BTC
     List<Price> productBTCPrices = products.expand((product) => product.currencyPrices.where((price) => price.currency == "BTC")).toList();
-    print(productBTCPrices); // [Price(currency: BTC, value: 0.002), Price(currency: BTC, value: 0.003), Price(currency: BTC, value: 0.004)]
+    print(productBTCPrices); 
+    // [Price(currency: BTC, value: 0.002), Price(currency: BTC, value: 0.003), Price(currency: BTC, value: 0.004)]
     
     // list of all product prices
     List<Price> allProductPrices = products.expand((product) => product.currencyPrices).toList();
-    print(allProductPrices); // [Price(currency: USD, value: 4.0), Price(currency: EUR, value: 3.0), Price(currency: BTC, value: 0.002), Price(currency: USD, value: 5.0), Price(currency: EUR, value: 4.0), Price(currency: BTC, value: 0.003), Price(currency: USD, value: 6.0), Price(currency: EUR, value: 5.0), Price(currency: BTC, value: 0.004)]
+    print(allProductPrices); 
+    // [Price(currency: USD, value: 4.0), Price(currency: EUR, value: 3.0), Price(currency: BTC, value: 0.002), Price(currency: USD, value: 5.0), Price(currency: EUR, value: 4.0), Price(currency: BTC, value: 0.003), Price(currency: USD, value: 6.0), Price(currency: EUR, value: 5.0), Price(currency: BTC, value: 0.004)]
     
     // list of all products with their respective currency prices
     List<String> productPrices = products.expand((product) => product.currencyPrices.map((price) => '${product.title} price in ${price.currency} is ${price.value}')).toList();
-    print(productPrices); // [banana price in USD is 4.0, banana price in EUR is 3.0, banana price in BTC is 0.002, apple price in USD is 5.0, apple price in EUR is 4.0, apple price in BTC is 0.003, orange price in USD is 6.0, orange price in EUR is 5.0, orange price in BTC is 0.004]
+    print(productPrices); 
+    // [banana price in USD is 4.0, banana price in EUR is 3.0, banana price in BTC is 0.002, apple price in USD is 5.0, apple price in EUR is 4.0, apple price in BTC is 0.003, orange price in USD is 6.0, orange price in EUR is 5.0, orange price in BTC is 0.004]
 ```
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
+
+Please make sure you test as appropriately.
+
+## Authors
+#### 1. Brian Mutinda
+[Github - brian1011](https://github.com/Brian1011)
+
+[Twitter - brian_1011_dev](https://twitter.com/BrianMutinda)
