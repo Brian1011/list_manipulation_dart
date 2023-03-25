@@ -3,7 +3,7 @@ import 'models/fruit.dart';
 import 'models/product.dart';
 
 main(){
-  findLastElement();
+  whereTypeList();
 }
 
 // add to list function
@@ -37,7 +37,6 @@ combineLists(){
   // alternative method using spread operator
   List<int> allNumbers = [...oddNumbers, ...evenNumbers];
   print(allNumbers); // [1, 3, 5, 2, 4, 6]
-
 }
 
 // remove specific element list
@@ -222,6 +221,13 @@ findElements(){
   print(fruitsWithColorOrange); // [Fruit{id: 3, name: orange, color: orange}, Fruit{id: 4, name: peach, color: orange}]
 }
 
+// whereType keyword returns a list of elements that are of a specific type.
+whereTypeList(){
+  List<dynamic> list = [1, 'two', 3, 'four', 5];
+  List<int> numbers = list.whereType<int>().toList();
+  print(numbers); // [1, 3, 5]
+}
+
 // forEach keyword applies a function to each element in the list.
 forEachList(){
   List<int> oddNumbers = [1, 3, 5];
@@ -262,7 +268,8 @@ foldList(){
     Cart(id: 3, title: 'orange', quantity: 5, unitPrice: 30),
   ];
 
-  double total = cartItems.fold(0.0, (previousValue, element) => previousValue + (element.quantity * element.unitPrice));
+  double initialUnitPrice = 0.0;
+  double total = cartItems.fold(initialUnitPrice, (previousValue, element) => previousValue + (element.quantity * element.unitPrice));
   print(total); // 220.0
 }
 
